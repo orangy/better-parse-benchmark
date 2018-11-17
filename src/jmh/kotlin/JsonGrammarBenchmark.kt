@@ -1,11 +1,11 @@
 package com.github.h0tk3y.betterParseBenchmark
 
 import SimpleJsonGrammar
-import com.github.h0tk3y.betterParse.grammar.parseToEnd
+import com.github.h0tk3y.betterParse.grammar.*
 import jsonSample1K
-import kotlinx.serialization.json.JsonTreeParser
-import org.openjdk.jmh.annotations.Benchmark
-import org.openjdk.jmh.infra.Blackhole
+import kotlinx.serialization.json.*
+import org.openjdk.jmh.annotations.*
+import org.openjdk.jmh.infra.*
 
 open class JsonGrammar {
     @Benchmark
@@ -23,7 +23,7 @@ open class JsonGrammar {
 
 fun main(args: Array<String>) {
     val j = JsonGrammar()
-    for (i in 1..10000) {
+    for (i in 1..30000) {
         j.jsonBetterParse(null)
     }
 }

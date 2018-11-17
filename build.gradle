@@ -17,9 +17,9 @@ repositories {
 
 jmh {
     benchmarkMode = ['thrpt']
-    warmupIterations = 5
+    warmupIterations = 10
     iterations = 10
-    fork = 3
+    fork = 1
 }
 
 dependencies {
